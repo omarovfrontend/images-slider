@@ -19,6 +19,14 @@ downBtn.addEventListener('click', () => {
     changeSlide('down')
 })
 
+document.addEventListener('keydown', event => {
+    if (event.key === 'ArrowUp') {
+        changeSlide('up')
+    } else if(event.key === 'ArrowDown') {
+        changeSlide('down')
+    }
+}) // ф-я перемешает слайды нажатием кнопки - вверх, вниз!
+
 function changeSlide(direction) {
     if(direction === 'up') {
         activeSlideIndex++;
